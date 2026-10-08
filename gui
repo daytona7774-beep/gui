@@ -1,27 +1,3 @@
---[[]]
-    Arcane - Native Roblox/Luau Edition
-    Converted from the original Drawing/executor UI to Roblox Instances.
-
-    IMPORTANT:
-    The original Drawing API cannot run in normal Roblox scripts.
-    This version uses ScreenGui/Frame/TextLabel/TextButton/TextBox,
-    UserInputService and TweenService instead.
-
-    BACKGROUND:
-    Upload your Arcane_Background.png to Roblox as an image/decal and put
-    the asset id below, for example:
-        Arcane.BackgroundImage = "rbxassetid://100367788354868"
-
-    API kept compatible where practical:
-      Arcane:CreateWindow
-      window:CreateTab / CreateTabSection / CreateSection
-      section:AddLabel / AddButton / AddToggle / AddTextBox
-      section:AddSlider / AddDualSlider / AddKeybind
-      section:AddColorPicker / AddDropdown / AddMultipleDropdown
-      window:SetVisible / Toggle / Finalize
-      Arcane:Notify / Log / AddTheme
---]]
-
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -33,7 +9,7 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 local Arcane = {}
 Arcane.__index = Arcane
 Arcane.IsOpen = true
-Arcane.BackgroundImage = "" -- Set to: rbxassetid://100367788354868
+Arcane.BackgroundImage = "rbxassetid://100367788354868"
 Arcane._windows = {}
 
 local themes = {
